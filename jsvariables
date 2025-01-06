@@ -1,0 +1,47 @@
+ Java script
+To develop the dynamic web sites
+1)	Static websites  eg: facebook login
+2)	Dynamic websites eg: changes to person to person(data) you-tube, criczbuzz, google maps
+Variables are two types
+Static : we have to declare datatype
+ Dynamic types: we need not to declare datatype
+In all the programming are variables
+•	Variables are Case-sensitive
+•	Variables can Starts with letters, _ (underscore), $ (dollar)
+•	Variables Can’t start with numbers
+•	In Variables Key words and reserved words also we cannot start
+•	Allowed are letters, _ (underscore), $ (dollar sign), numbers 
+How to declare variables
+var : it is used from 1995-2015 in old browsers
+let: it is used from 2015 onwords
+const
+Reassign the variables:
+Eg:1
+ 
+Out : sam
+Eg: 2
+ output : 10
+
+ressigna varables is possible by var
+Reassign with let is accepted
+Reassign with const is not accepted
+
+Redeclaration 
+Redeclaring with var 
+ 
+Redeclaring is possible in var 
+Output: 10
+Redeclaring is not possible with let 
+
+ 
+
+Output: error
+Redeclaring is not possible with const 
+Block Scope:
+Variables declaration with var doesnot have block scope
+  output:  
+
+
+
+In Let Variables declaration is possible have block scope
+ 
