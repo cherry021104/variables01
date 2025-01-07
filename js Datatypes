@@ -1,0 +1,78 @@
+7th January 2025
+Topic:Data types:
+Two types :
+1)primitive
+2)non primitive:Objects,Arrays
+To check the data type: typeof
+1)primitive:predefined :we can store single values
+1)Number: Integers, floats
+2)String:Stream of characters enclosed in quotes
+Types of quotes:
+single,double,backtick quotes
+3)Boolean: true or false
+4)Null:empty value or no value
+5)undefined:--declared variable with no value
+1)Numbers:
+2) String:Stream of characters enclosed in quotes
+single,double work as same
+Back ticks introduced inES6 version
+EX:
+    <script>
+        let a=1
+        console.log("hi +a+a")
+        document.write('hi+ a+a' ,"<br>")
+        document.write(hi+ ${a+a})
+        console.log(hi +${a+a})
+    </script>
+Output:
+ 
+Ex:
+    <script>
+        a="sai"
+        b="kumar"
+        age = 30
+        let c= a+b
+        console.log(Iam ${a+b},my age is ${+age} years old)
+    </script>
+Output:
+Iam saikumar,my age is 30 years old
+Ex:
+<script>
+        a="React Js"
+        b="Student"
+        let c= a+b
+        d= "Amrutha"
+        console.log(`${c} = ${d} `)
+    </script>
+Output: ReactJs Student = Amrutha
+3)Boolean
+Console(35>=35) #
+(35>=30) or (30<=35)
+(35>=30) and (30<=36)
+(35>=30) and (36<=36)
+(35>=30) or (30<=35)
+EX:
+<script>
+    let a=null
+    document.write(a ,'<br>')
+    document.write(typeof(a))
+</script>
+EX:
+<script>
+let age
+    console.log(age)
+</script>
+Condition :An expression that evaluate the result(true or false)
+Console.log(5>4)
+Conditional statement:
+To make the set instructions executes only when the conditional is true
+Block of code (Conditional block): set of instructions
+when this blockof code will executes it will execute when the specific condition is true
+
+
+Indentation:
+{
+block of code
+}
+If :only for one possible condition
+Else if only for two possible conditions
