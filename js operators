@@ -1,0 +1,221 @@
+theory
+
+Operators:
+1)Arithmetic Operators:
++, - , *, 
+Multiplication,          - *
+Division                  -    /  (Q)
+Modulus Operator        - % ( R )
+Exponential (raised to the power  -- **
+++
+EX:
+    <script>
+        let a=5
+        let b=2
+        document.write(a*b ,"<br>")
+        document.write(a**b ,"<br>")
+        document.write(a/b ,"<br>")
+        document.write(a%b)
+
+    </script>
+Output:
+10
+25
+2.5
+1
+EX:
+<script>
+        let a=5
+        let b=2
+        a++
+        b--
+        document.write(a*b ,"<br>")
+        document.write(a**b ,"<br>")
+        document.write(a/b ,"<br>")
+        document.write(a%b ,"<br>")
+        document.write(a+b ,"<br>")
+    </script>
+Output:
+6
+6
+6
+0
+7
+Assignment Operator:
+Var student = “swetha”
++=
+-=
+/=
+%=
+Ex:
+<script>
+        let a=5
+        let b=2
+        a+=40
+        b-=5
+        document.write(a ,"<br>")
+        document.write(b ,"<br>")
+    </script>
+Output:
+45
+-3
+Logical Operators:
+And - &&
+T and T =- T
+Or - ||
+NOT - !
+T OR F = F
+EX:
+<script>
+        let a=5
+        let b=2
+        document.write(a>b && a>2 ,"<br>")
+        document.write(a>b && a>12 ,"<br>")
+        document.write(a>b || a>2 ,"<br>")
+        document.write(!(!a>12), "<br>")
+    </script>
+
+Output:
+true
+false
+true
+true
+Relational Operators:
+Compare the values
+<,>,>=, <=, ==, ===, !=, !==
+==   - equally
+EX:
+<script>
+        let a=5
+        let b=2
+        document.write(a==b ,"<br>")//equal to
+        document.write(a===b ,"<br>")//Strict equal to
+        document.write(a!=b ,"<br>")//not equal
+        document.write(a!==b, "<br>")//strict not equal
+    </script>
+
+Output:
+false
+false
+true
+true
+EX:
+<script>
+        let a=5
+        let b=2
+        document.write(a==b ,"<br>")//equal to
+        document.write(a===b ,"<br>")//Strict equal to
+        document.write(a!=b ,"<br>")//not equal
+        document.write(a!==b, "<br>")//Strict not equal
+        document.write(a>=b, "<br>")//greater than or equal to
+    </script>
+Output:
+false
+false
+true
+true
+true
+Conditional Operator/ Ternary Operator:
+First evaluates the expression for a true or false
+Syntax:Condition ?
+EX:
+<script>
+        let t=40
+        let r=(t>40)?'AC-off': 'AC-on'
+        document.write(r ,"<br>")
+    </script>
+Output:
+AC-on
+Alert message:
+alert("Amrutha")
+        document.write(alert)
+Output:
+ 
+EX:
+ <script>
+        let a=prompt("Enter your Name")
+        alert(My name is: ,${a})
+    </script>
+Output:
+ 
+PromptOF:
+EX:
+script>
+        let a1=prompt()
+        document.write(a1 ,"<br>")
+        document.write(typeof(a1) ,"<br>")
+        let a2=prompt()
+        document.write(a1+a2 ,"<br>")
+    </script>
+OUTPUT:
+1
+string
+12
+
+
+
+
+
+code 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let a1=prompt()
+        //document.write(a1,"<br>") //5
+        //document.write(typeof(a1,"<br>"))//string
+        //let a2=prompt()
+        //document.write(a2,"<br>")//10
+        //document.write(a1+a2 ,"<br>")//510
+
+        //let  a = prompt("Enter your name?")
+        //alert("my name is : " +a)
+        //alert(`my name is : ${a}`)//through backtick
+
+
+        //alert("cherry")
+        //document.write(alert)
+
+       //let t = 40
+       //let r =(t>40)? 'ac-off':'Ac-on'//Ac-on true 
+       //document.write(r, "<br>")// Ac-on
+
+
+       //let a ="5";
+       //let b="5";
+       //document.write(a>b,"<br>")//false
+       //document.write(a<b,"<br>")//false
+       //document.write(a>=b,"<br>")//true
+       //document.write(a<=b,"<br>")//true
+       //document.write(a==b,"<br>")//true
+       //document.write(a!=b,"<br>")//false
+       //document.write(a===b,"<br>")//false
+       //document.write(a!==b,"<br>")//true
+
+       //document.write(a>b && a>12, "<br>")//false
+       //document.write(a>b && a>2,"<br>")//true
+       //document.write(a>b || a>12,"<br>")//true
+       //document.write(!(a>12),"<br>") //true
+
+       //a+=40 // a=a+40 a=40+5
+       //b-= 5 //b=b-5 
+       //document.write(a,"<br>")
+       //document.write(b,"<br>")
+       //a++
+       //b--
+
+       //document.write(a,"<br>");
+       //document.write(b,"<br>");
+       //document.write(a/b,"<br>");
+       //document.write(a%b,"<br>");
+       //document.write(a+b,"<br>");
+       //document.write(a-b,"<br>");
+       
+    </script>
+</body>
+</html>
