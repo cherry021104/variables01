@@ -1,0 +1,70 @@
+Problem solving with JavaScript
+1)Write a program to check whether the number is divisible by 2 and 3 and both(take prompt)
+<script>
+        let a=(parseInt(prompt("enter a number:")))
+        if((a %2==0) && (a %3==0)){
+            document.write("The number is divisible by 2 and 3")
+        }else{
+            document.write("the number is not divisible by 2 and 3")
+        }
+    </script>
+Output:
+Enter a number:12
+The number is divisible by 2 and 3
+2)write a program to find the largest number out of three numbers expected from the user
+<script>
+        
+        let a=parseInt(prompt("Enter 1st number: "))
+        let b=parseInt(prompt("Enter 2nd number: "))
+        let c=parseInt(prompt("Enter 3rd number: "))
+        if(a>b && a>c){
+        document.write("The largest number is "+a)
+            }else if(b>a && b>c){
+                document.write("The largest number is "+b)
+                }else{
+                    document.write("The largest number is "+c)
+        }
+    </script>
+
+Output:
+Enter 1st number:12
+Enter 2nd number:10
+Enter 3rd number:1
+The largest number is 12
+3)Accept the following from the user and calculate the percentage of classes attended:
+a)Total number of working days
+b)total number of days for absent
+After calculating percentage show that ,if the percentage is less than 75,then student will not be eligible to write exam
+ <script>
+    let a=parseInt(prompt("Enter number of working days:"))
+    let b=parseInt(prompt("Enter the number of days for absent:"))
+    let c=a-b
+    let d=((c/a)*100)
+    if(d>75){
+        document.write("You are eligible to write exam")
+    }else{
+        document.write("You are not eligible to write exam")
+    }
+</script>
+Output:
+Enter number of the working days :100
+Enter number of days for absent:24
+You are eligible to write exam
+Switch:
+If 
+Else
+Elseif
+Syntax:
+Switch(variable expression){
+Case value1:
+//block of code for case1
+Break;
+Case value2:
+//block of code for case2
+Break;
+Case value3:
+//block of code for case3
+Break;
+Case value4:
+//block of code for case4
+Break;
