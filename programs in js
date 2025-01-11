@@ -1,0 +1,179 @@
+Switch:
+Syntax:
+Switch(variable/expression){
+Case value1:
+//block of code for case1
+Break;
+Case value2:
+//block of code for case2
+Break;
+Default:
+//body of default
+Ex:
+<script>
+    let n = prompt("Enter a number:")
+    switch(true){
+        case num>0:
+        console.log("number is positive");
+        break;
+        case num==0:
+        console.log("number is zero")
+        break;
+        case num<0:
+        console.log("number is negative");
+        break;
+
+        default:
+        console.log("Invalid input")
+    }
+</script>
+Output:
+Enter a number:1
+Number is positive
+Enter a number:0
+Number is zero
+Enter a number:-1
+Number is negative
+Enter a number:a
+Invalid input
+Ex: without break points
+<script>
+    let num = prompt("Enter a number:")
+    switch(true){
+        case num>0:
+        console.log("number is positive");
+        //break;
+        case num==0:
+        console.log("number is zero")
+        //break;
+        case num<0:
+        console.log("number is negative");
+        //break;
+
+        default:
+        console.log("Invalid input")
+    }
+</script>
+
+Output:
+ 
+EX(Days):
+<script>
+    let a = prompt("Enter day:")
+    switch(true){
+        case a=='Monday':
+        case a=='Tuesday':
+        case a=='Wednesday':
+        case a=='Thursday':
+        console.log("Weekday")
+        break;
+        case a=='Friday':
+        case a=='Saturday':
+        case a=='Sunday':
+        console.log("Weekend")
+        break;
+
+        default:
+        console.log("Invalid input")
+    }
+</script>
+Output:
+Enter day:Monday
+Weekday
+Enter day:Sunday
+Weekend
+Enter day:0
+Invalit input
+1)
+Conditional Statements:
+Block of code or conditional block
+Only once
+#1 – 10
+#conditional statements:
+#loops:   #1 #next 5 const
+a=input() #1
+a=a+1        #only once in loop
+Print(a)    #2
+a=a+1
+Print(a)#3
+a=a+1
+Print(a)#4
+a=a+1
+Print(a)#5
+Electrical Bill:
+Shaik  Meera sir asked the students to help calculate the electricity bill for a household.the electricity company charges different rates based on the number of units used.The charges per unit for different ranges are:
+For the first 50 units (0-50):2 per unit
+for the next 100 units (51-150):3 per unit
+For the next 100 units (151-250):5 per unit
+For the next 250(251 an bove):8 per unit
+After calculating the total charge, an additional 20% of the total amount is added to the bill.
+Task:Write a program that reads the number of units used and the calculate the total electricity bill
+Input:
+The input will be a single number representing the units of electricity used
+Output:
+The output should be the total bill amount, including the additional 20% charge
+Calculation:
+0-50=rs2
+51-150=rs3
+151-250=rs5
+250>=rs8
+#280
+50 * 2 =100
+100*3=300
+100*5=500
+30*8=240
+Bill=1140
+Subcharge =0,2*1140=228
+Tootal bill= bill+subcharge =1140+228=1368
+#450
+50*2=100
+100*3=300
+100*5=500
+200*8=1600
+Bill=2,500
+Subharge=0.2*2500=500
+Total bill=bill+Sub-charge=2,500+500=3000
+<script>
+        function calculateElectricityBill(units) {
+            let total = 0;
+            if (units > 250) {
+                total += (units - 250) * 8;
+                units = 250;
+            }
+            if (units > 150) {
+                total += (units - 150) * 5;
+                units = 150;
+            }
+            if (units > 50) {
+                total += (units - 50) * 3;
+                units = 50;
+            }
+            if (units > 0) {
+                total += units * 2;
+            }
+
+            total += total * 0.2;
+            return total;
+        }
+        const unitsUsed = prompt("Enter a number");
+        const totalBill = calculateElectricityBill(unitsUsed);
+        console.log(The total electricity bill is: ₹${totalBill.toFixed(2)});
+Output:
+Enter a number:200
+The total electricity bil is:780
+HandShake:
+It was pallavi’s first day at the institute ,Shaik Meera sir asked the students to meet every other student in the class and introduce themselves.Sir is asked them to do Handshakes when they meet each other  
+Task:
+Write a program that reads an integer N and prints the number of handshakes made by the students
+Input:
+The input will be a single line containing an integer representing the number of students N
+Output:
+The output should be a single line containing an integer that is the number of handshakes made by the students in the classroom
+<script>
+        let a=parseInt(prompt("Enter the number:"))
+        let b=a*(a-1)/2
+        console.log("Total number of handshakes are:"+b)
+    </script>
+Output:
+Enter the number:78
+Total number of handshakes are:3003
