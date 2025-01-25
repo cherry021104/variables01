@@ -1,0 +1,88 @@
+Callback functions:
+you can pass the callback function as an argument to another function
+Execution:The function receiving  the callback will execute the callback at some point during  execution (often at the end or after an asynchronous operations is done)
+Ex:
+function mainfunction(callback){
+        console.log("Executing main Function");
+        callback()
+    }
+    function callbackFunction(){
+        console.log("callback function executed")
+    }
+    mainfunction(callbackFunction);
+Explanation:
+mainFunction takes a parameter callback
+callback Function is passed as an argument to mainfunction 
+inside the mainfunction ,the callback function
+Output:
+Mainfunction(callbackFunction);
+It will execute the code inside the main function 
+It will print (“Executing main function”); 
+Then it reaches to callback() ; where it call the function which is passed of callback function executed
+Ex:
+Passing a Named function  as a callback;
+function greet(name,callback){
+        console.log("hello " +name);
+        callback();
+    }
+    function goodbye(){
+        console.log("Goodbye")
+    }
+    greet("Amrutha",goodbye);
+Output:
+Hello Amrutha
+Goodbye
+Ex: using an argument anonymous function as a callback
+    function greet(name,callback){
+        console.log("hello " +name);
+        callback();
+    }
+    greet("ammu",function() {
+        console.log("goodbye")
+    });
+Explanation:
+We didn’t pass a named function like (“goodbye”) ;
+Instead of that we defined an anonymous function directly with in the greet function call
+Output:
+hello ammu
+goodbye
+Ex:
+Asynchronous callback with setTimeout
+function fetchData(callback){
+        console.log("Fetching data...") 
+        setTimeout(function(){
+            console.log("Data fetched");
+            callback();
+        },2000)
+    }
+    function processData(){
+        console.log("processing the fetched data...")
+    }
+    fetchData(processData);
+Output:
+Fetching Data….
+Data fetched
+Processing the fetched data….
+Ex:
+Using callback with array methods(map)
+const number=[1,2,3,4,5]
+    const d= number.map(function(num){
+        return num*2
+    })
+    console.log(d)
+Explanation:
+Map() is a built in array method that callback function to process each item in array
+The call back here doubles each 
+User registration Scenario used:
+Ex:
+function registeruser(username, email, callback){
+        console.log("registering user" +username);
+        setTimeout(function(){
+            console.log("user"+username +"registered successfully");
+            callback(email);
+        },2000);
+    }
+    function sendWelcomeEmail(email){
+        console.log("sending welcome email to" +email);
+    };
+    registerUser("Amrutha" , "amrutha@gmail.com", sendWelcomeEmail);
