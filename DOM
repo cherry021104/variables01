@@ -1,0 +1,74 @@
+28th January 2025
+DOM(DOCUMENT OBJECT MODEL)
+It is used  in web development used to interact and manipulate(change) the html documents.
+When the html web pages loaded , the browser created DOM of the Webpage
+When the html file is loaded into the browser ,
+The javascript cannot understand the html document directly
+
+DOM :it is basically the representation of the same html document but in a tree-like structure composed of object
+Keypoints: 
+1)Structure:The DOM represents the structure html ,document as a tree.Each node in the tree represents the elements, an attribute or text
+2)Manipulation: using javascript , you can interact with elements (buttons ,paragraphs) on the webpage ,changing the content ,styles, can add or remove elements
+3)Event handling:you can handle the interactions,like click or pressing the button
+4)W3C:worls wide web consortium
+Dom:
+it is the entry point of the Dom
+ 
+ 
+<html>
+<head>
+<title>Malla reddy </title>
+</head>
+<body>
+<h1>Iam in hyd</h1>
+</body>
+</html>
+
+Methods of Document Objects:
+used to interact with and manipulate the document
+Getting Element:
+1)Getting an Element by Id
+2) Getting an Element by class 
+3) Getting an Element by tag
+4) Getting an Element by query selection
+
+#id and class
+#having 12 students
+#3 classes
+#g1-4  #green 
+#g2-4  #red
+#g3-4  #blue
+#when there are same html elements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         <style>
+        .a{
+            color: blue;
+        }
+        .b{
+            color:pink;
+        }
+        .c{
+            color:green;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <h1 id="aa">Amrutha</h1>
+    <h1 id="bb">Cherishma</h1>
+    <h1 id="cc">Swathi</h1>
+    <h1 id="dd">uma</h1>
+    <h1 class="b">Gadipudi</h1>
+    <h1 class="c">Varshini</h1>
+    <script>
+        let a=document.get(ElementById)
+        console.log()
+    </script>
+</body>
+</html>
