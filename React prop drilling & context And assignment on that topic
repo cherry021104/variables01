@@ -1,0 +1,137 @@
+13-0202025
+Use context():
+Props(properties) in React are used it pass data from parent component to child component
+Prop Drilling is the process of passing data  from parent component to deeply child component through intermediate components, by passing data as props at each level 
+App
+Child1            child2
+Child3           child4
+function App(){
+  const data="hello iam cherishma"
+  return(
+    <div>
+      <User1 data={data}/>
+
+    </div>
+  )
+}
+// user1 compomnent
+function User1({data}){
+  return<User2 data={data}/>
+
+
+}
+function User2({data}){
+  return<User3 data={data}/>
+}
+function User3({data}){
+  return<User4 data={data}/>
+}
+function User4({data}){
+  return<div>{data}</div>
+}
+export default App;
+output:
+Hello I am Cherishma
+
+
+import React, { createContext, useContext } from "react";
+
+// create context to hold the data
+const DataContext = createContext();
+
+function App() {
+  // the data  we want to share with user4
+  const data = "hello iam Abhinaya";
+  return (
+    <DataContext.Provider value={data}>
+      <User1 />
+    </DataContext.Provider>
+  );
+}
+// user1 compomnent
+function User1({ data }) {
+  return <User2 />;
+}
+function User2({ data }) {
+  return <User3 />;
+}
+function User3({ data }) {
+  return <User4 />;
+}
+function User4() {
+  const data = useContext(DataContext);
+  return <div>{data}</div>;
+}
+export default App;
+
+output 
+Hello I am cherishma
+
+
+
+
+
+import React, { createContext, useContext } from "react";
+
+// Creating Context for user data
+const UserContext = createContext();
+
+// Profile Component (Receives props in props drilling method)
+const ProfileWithProps = ({user}) => {
+  return (
+    <div>
+      <h2>Profile (Props Drilling)</h2>
+      <p>Name:{user.name}</p>
+      <p>Email:{user.email}</p>
+    </div>
+  );
+};
+
+// Profile Component using Context
+const ProfileWithContext = () => {
+  const user = useContext(UserContext);
+  return (
+    <div>
+      <h2>Profile (Using Context)</h2>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+};
+
+// Intermediate Component to simulate props drilling
+const IntermediateComponent = ({ user }) => {
+  return <ProfileWithProps user={user} />;
+};
+
+const App = () => {
+  const user = { name: "E.Cherishma Devi", email: "2211cs010157@mallareddyuniversity.ac.in" };
+
+  return (
+    <UserContext.Provider value={user}>
+      <div>
+        <h1>User Profile App</h1>
+        <IntermediateComponent user={user} />
+        <ProfileWithContext />
+      </div>
+    </UserContext.Provider>
+  );
+};
+
+export default App;
+
+output:
+User Profile App
+Profile (Props Drilling)
+Name:E.Cherishma Devi
+
+Email:2211cs010157@mallareddyuniversity.ac.in
+
+Profile (Using Context)
+Name: E.Cherishma Devi
+
+Email: 2211cs010157@mallareddyuniversity.ac.in
+
+
+
+
